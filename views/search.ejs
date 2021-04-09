@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/search.css">
+
+</head>
+<body>
+    <header>
+        <%- include('./layout/header') %>
+    </header>
+    <main>
+        <form action="/search" method="POST">
+            <input type="text" name="search" id="search" placeholder="search by song, artist and album.">
+            <label for="search">SEARCH: </label>
+            <button type="submit">SEARCH</button>
+        </form>
+        
+        <% if(ongs){ %>
+            <% mySongs.forEach(data => { %>
+                <h3><%= data.title%></h3>
+                <audio src="<%= data.preview%>" controls></audio>
+                
+            <% })} %>
+    </main>
+    <footer>
+        <%- include('./layout/footer') %>
+
+    </footer>
+    
+</body>
+</html>
