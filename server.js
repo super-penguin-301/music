@@ -67,8 +67,9 @@ function aboutHandler(req, res) {
 function searchPostHandler(req, res) {
     let info = req.body.search;
     console.log(info);
-    let URL = `https://api.deezer.com/search?q=${info}`;
-    superagent.get(URL).then( songs => {
+    let URL = `https://api.deezer.com/search?q=${info}&limit=10`;
+    
+    superagent.get(encodeURI(URL)).then( songs => {
         console.log(songs.body.data);
         btata = true;
         res.render('search', {mySongs: songs.body.data, ongs:btata})

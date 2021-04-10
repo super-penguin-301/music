@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=868">
     <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.5/waves.min.css">
+    <link rel="stylesheet" href="https://michael-zhigulin.github.io/mz-codepen-projects/Material%20Design%20UI%20Audio%20Player/font/font.css">
     <link rel="stylesheet" href="style/search.css">
 
 </head>
@@ -16,20 +20,42 @@
         <form action="/search" method="POST">
             <input type="text" name="search" id="search" placeholder="search by song, artist and album.">
             <label for="search">SEARCH: </label>
-            <button type="submit">SEARCH</button>
+            <i class="fi fi-search"></i>
+            <button type="submit"><i class="fas fa-search"></i></button>
         </form>
         
         <% if(ongs){ %>
             <% mySongs.forEach(data => { %>
-                <h3><%= data.title%></h3>
-                <audio src="<%= data.preview%>" controls></audio>
-                
+                <br>
+                <section>
+                    <ul class="audio-players">
+                        <li>
+                            <div class="audio-player js-audio-player"><button class="audio-player__control js-control"><div class="audio-player__control-icon"></div></button>
+                                <h4 class="audio-player__title"><%= data.title%></h4><audio preload="auto"><source src="<%= data.preview%>"/></audio><img class="audio-player__cover" src="<%= data.album.cover_xl%>" />
+                                <video
+                                    preload="auto" loop="loop">
+                                    <source src="" type="video/mp4" />
+                                    </video>
+                            </div>
+                        </li>
+                        
+                    </ul>
+            </section>
+                <br>
             <% })} %>
     </main>
     <footer>
         <%- include('./layout/footer') %>
 
     </footer>
-    
+    <script type="text/javascript" src="snow.js"></script>
+    <script type="text/javascript">
+        window.onload = function(){
+            snow.init(10);
+        };
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/search.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </body>
 </html>
