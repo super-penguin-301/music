@@ -45,14 +45,14 @@ client.connect().then(()=> {
 //---------------------------------------------------------
 
 
-let btata = false;
+let btata = 0;
 // handler functions
 function indexHandler(req, res) {
     res.render('index');
 }
 function searchHandler(req, res) {
-    console.log(req.body);
-    btata = false;
+    console.log('get fun',req.body);
+    btata = 0;
     res.render('search', {ongs:btata });
 }
 function favoriteHandler(req, res) {
@@ -66,11 +66,11 @@ function aboutHandler(req, res) {
 }
 function searchPostHandler(req, res) {
     let info = req.body.search;
-    console.log(info);
+    console.log('post fun',info);
     let URL = `https://api.deezer.com/search?q=${info}`;
     superagent.get(URL).then( songs => {
         console.log(songs.body.data);
-        btata = true;
+        btata = 1;
         res.render('search', {mySongs: songs.body.data, ongs:btata})
     })
 }
