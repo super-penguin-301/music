@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="style/search.css">
 
 </head>
+
 <body>
     <header>
         <%- include('./layout/header') %>
@@ -18,18 +20,59 @@
             <label for="search">SEARCH: </label>
             <button type="submit">SEARCH</button>
         </form>
-        
-        <% if(ongs){ %>
-            <% mySongs.forEach(data => { %>
-                <h3><%= data.title%></h3>
-                <audio src="<%= data.preview%>" controls></audio>
-                
-            <% })} %>
+        <div>
+            <% if(ongs){ %>
+                <% mySongs.forEach(data=> { %>
+                    <h3>
+                        <%= data.title%>
+                    </h3>
+                    <audio src="<%= data.preview%>" controls></audio>
+
+
+                    <form action="/details.id" method="post">
+                        <input type="text" name="title" value="<%=data.title %>" hidden>
+                        <input type="text" name="author" value="<%=data.artist.picture_xl %>" hidden>
+                        <input type="text" name="description" value="<%=data.artist.name %>" hidden>
+                        <input type="text" name="isbn" value="<%=data.album.title" hidden>
+                        <input type="text" name="imge_url" value="<%=data.link %>" hidden>
+                        <button class="buttonshow">show details</button>
+                    </form>
+                    <% })} %>
+        </div>
+        <div>
+            <div class="container">
+                <img class="imgdet" src="<%=data.artist.picture_xl%>" alt="">
+                <h5>
+                    <%=data.title%>
+                </h5>
+                <h6>
+                    <%= data.artist.name %>
+                </h6>
+                <h5>
+                    <%= data.album.title %>
+                </h5>
+                <p>
+                    <%=data.link %>
+                </p>
+
+                <form action="/addfav" method="post">
+                    <input type="text" name="title" value="<%=data.title %>" hidden>
+                    <input type="text" name="author" value="<%=data.artist.picture_xl %>" hidden>
+                    <input type="text" name="description" value="<%=data.artist.name %>" hidden>
+                    <input type="text" name="isbn" value="<%=data.album.title" hidden>
+                    <input type="text" name="imge_url" value="<%=data.link %>" hidden>
+                    <button class="buttonshow">add to fav</button>
+                </form>
+
+            </div>
+        </div>
+
     </main>
     <footer>
         <%- include('./layout/footer') %>
 
     </footer>
-    
+
 </body>
+
 </html>
