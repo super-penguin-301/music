@@ -17,8 +17,8 @@
         <%- include('./layout/header') %>
     </header>
     <main>
-        <form action="/search" method="POST">
-            <input type="text" name="search" id="search" placeholder="search by song, artist and album.">
+        <form class="sreach-form" action="/search" method="POST">
+            <input class="input-search" type="text" name="search" id="search" placeholder="search by song, artist and album.">
             <label for="search">SEARCH: </label>
             <i class="fi fi-search"></i>
             <button type="submit"><i class="fas fa-search"></i></button>
@@ -27,7 +27,7 @@
         <% if(ongs){ %>
             <% mySongs.forEach(data => { %>
                 <br>
-                <section>
+                <section class="section-audio">
                     <ul class="audio-players">
                         <li>
                             <div class="audio-player js-audio-player"><button class="audio-player__control js-control"><div class="audio-player__control-icon"></div></button>

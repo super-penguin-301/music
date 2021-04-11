@@ -68,7 +68,7 @@ function searchPostHandler(req, res) {
     let info = req.body.search;
     console.log('post fun',info);
     let URL = `https://api.deezer.com/search?q=${info}`;
-    superagent.get(URL).then( songs => {
+    superagent.get(encodeURI(URL)).then( songs => {
         console.log(songs.body.data);
         btata = 1;
         res.render('search', {mySongs: songs.body.data, ongs:btata})
