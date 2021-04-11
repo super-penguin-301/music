@@ -48,7 +48,12 @@ client.connect().then(()=> {
 let btata = false;
 // handler functions
 function indexHandler(req, res) {
-    res.render('index');
+    let URL = 'https://api.deezer.com/chart';
+    superagent.get(URL).then( result => {
+        let info = result.body;
+
+        res.render('index', { datas: info});
+    })
 }
 function searchHandler(req, res) {
     console.log(req.body);
@@ -67,8 +72,9 @@ function aboutHandler(req, res) {
 function searchPostHandler(req, res) {
     let info = req.body.search;
     console.log(info);
-    let URL = `https://api.deezer.com/search?q=${info}`;
-    superagent.get(URL).then( songs => {
+    let URL = `https://api.deezer.com/search?q=${info}&limit=10`;
+    
+    superagent.get(encodeURI(URL)).then( songs => {
         console.log(songs.body.data);
         btata = true;
         res.render('search', {mySongs: songs.body.data, ongs:btata})
