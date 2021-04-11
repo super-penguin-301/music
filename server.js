@@ -48,7 +48,12 @@ client.connect().then(()=> {
 let btata = false;
 // handler functions
 function indexHandler(req, res) {
-    res.render('index');
+    let URL = 'https://api.deezer.com/chart';
+    superagent.get(URL).then( result => {
+        let info = result.body;
+
+        res.render('index', { datas: info});
+    })
 }
 function searchHandler(req, res) {
     console.log(req.body);
