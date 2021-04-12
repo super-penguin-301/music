@@ -24,7 +24,7 @@
 
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">    
 </head>
 
 <body>
@@ -34,17 +34,36 @@
     </header>
 
     <!-- ----------------newsearch----------------------- -->
-    <br><br><br><br><br><br><br>
-    <h1 class="ml2" style="text-align: center; font-family: 'Berkshire Swash', cursive;"> <i class="fas fa-music"></i> ...Listen and have fun</h1>
-    <br><br><br><br>
+    
+    <!-- <h1 class="ml2" style="text-align: center; font-family: 'Berkshire Swash', cursive;"> <i class="fas fa-music"></i> ...Listen and have fun</h1> -->
+    
     <main id="main">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
             integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-        <form style="background-color:#fff;border: black solid;" action="/search" method="POST">
-            <input type="text" name="search" id="search" placeholder="search by song, artist and album.">
-
-            <button style="background-color: transparent;border: none;" type="submit"><i style="color: #0c0c0b;" class="fas fa-search"></i></button>
+        <form id="form" style="background-color:#fff;" action="/search" method="POST">
+            <input id="input" type="text" name="search" placeholder="search by song, artist and album.">
+            <button id="buttons" type="submit" value="search" ><i class="fas fa-search"></i></button>
         </form>
+
+        
+
+<!----------------new section----------------------->
+
+        <section id="cta" class="cta">
+            <div class="container" data-aos="zoom-in">
+        
+              <div class="text-center">
+                <h3><i class="fas fa-music"></i> ...Listen and have fun</h3>
+                <p>Popular keyword.</p>
+                <a class="cta-btn" href="#">Call To Action</a>
+                <a class="cta-btn" href="#">Call To Action</a>
+                <a class="cta-btn" href="#">Call To Action</a>
+                <a class="cta-btn" href="#">Call To Action</a>
+                <a class="cta-btn" href="#">Call To Action</a>
+              </div>
+        
+            </div>
+          </section>
 
 
         <% if(ongs){ %>
@@ -89,6 +108,8 @@
  
 
 
+
+
     </main><!-- End #main -->
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <!-- ======= Footer ======= -->
@@ -117,6 +138,9 @@
     <script src="assets/js/main.js"></script>
 
 
-</body>
+
+
+    
+
 
 </html>
