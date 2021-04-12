@@ -81,40 +81,50 @@
 
             <div class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
                 <div class="col-xl-2 col-md-4">
-                    <a class='nav-link scrollto' href="#artists"><div class="icon-box">
-                        <i class="ri-paint-brush-line"></i>
-                        <h3>Top Artists</h3>
-                    </div></a>
+                    <a class='nav-link scrollto' href="#artists">
+                        <div class="icon-box">
+                            <i class="ri-paint-brush-line"></i>
+                            <h3>Top Artists</h3>
+                        </div>
+                    </a>
                 </div>
                 <div class="col-xl-2 col-md-4">
-                    <a class='nav-link scrollto' href="#topten"><div class="icon-box">
-                        <i class="ri-store-line"></i>
-                        <h3>Top Tracks</h3>
-                        <!-- use template for songs-->
-                    </div></a>
+                    <a class='nav-link scrollto' href="#topten">
+                        <div class="icon-box">
+                            <i class="ri-store-line"></i>
+                            <h3>Top Tracks</h3>
+                            <!-- use template for songs-->
+                        </div>
+                    </a>
                 </div>
                 <div class="col-xl-2 col-md-4">
-                    <a class='nav-link scrollto' href="#albums"><div class="icon-box">
-                        <i class="ri-calendar-todo-line"></i>
-                        <h3>Top Albums</h3>
-                    </div></a>
+                    <a class='nav-link scrollto' href="#albums">
+                        <div class="icon-box">
+                            <i class="ri-calendar-todo-line"></i>
+                            <h3>Top Albums</h3>
+                        </div>
+                    </a>
                 </div>
                 <div class="col-xl-2 col-md-4">
-                    <a class='nav-link scrollto' href="#playlists"><div class="icon-box">
-                        <i class="ri-bar-chart-box-line"></i>
-                        <h3>Top playlists</h3>
-                    </div></a>
-                </div>              
+                    <a class='nav-link scrollto' href="#playlists">
+                        <div class="icon-box">
+                            <i class="ri-bar-chart-box-line"></i>
+                            <h3>Top playlists</h3>
+                        </div>
+                    </a>
+                </div>
                 <div class="col-xl-2 col-md-4">
-                    <a class='nav-link scrollto' href="#team"><div class="icon-box">
-                        <i class="ri-database-2-line"></i>
-                        <h3>Our Team</h3>
-                    </div></a>
+                    <a class='nav-link scrollto' href="#team">
+                        <div class="icon-box">
+                            <i class="ri-database-2-line"></i>
+                            <h3>Our Team</h3>
+                        </div>
+                    </a>
                 </div>
             </div>
 
         </div>
-    
+
 
     </section>
     <!-- End Hero -->
@@ -166,7 +176,7 @@
                         <div class="icon-box">
                             <div class="icon"><i class="bx bx-slideshow"></i></div>
                             <h4><a href="">Hight Quality</a></h4>
-                            <p>Our tracks came with high quality and clear voice  to give you a comfort</p>
+                            <p>Our tracks came with high quality and clear voice to give you a comfort</p>
                         </div>
                     </div>
 
@@ -184,8 +194,8 @@
         </section>
         <!-- End Features Section -->
 
-         <!-- ======= Clients Section ======= -->
-         <section id="clients" class="clients">
+        <!-- ======= Clients Section ======= -->
+        <section id="clients" class="clients">
             <div class="container" data-aos="zoom-in">
 
                 <div class="clients-slider swiper-container">
@@ -207,7 +217,7 @@
         <!-- End Clients Section -->
 
         <!-- ======= T10 Artists Section ======= -->
-        
+
         <section id="artists" class="portfolio">
             <div class="container" data-aos="fade-up">
 
@@ -224,8 +234,10 @@
                             <div class="portfolio-wrap">
                                 <img src="<%= x.picture_big%>" class="img-fluid" alt="">
                                 <div class="portfolio-info">
-                                    <h4><%= x.name%></h4>
-                                    
+                                    <h4>
+                                        <%= x.name%>
+                                    </h4>
+
                                     <div class="portfolio-links">
                                         <a target="_blank" href="<%= x.link%>" title="More Tracks For the Artist"><i class="bx bx-link"></i></a>
                                     </div>
@@ -233,9 +245,9 @@
                             </div>
                         </div>
                         <% })%>
-                    </div>
-
                 </div>
+
+            </div>
         </section>
 
         <!-- End T10 Artists Section -->
@@ -253,30 +265,34 @@
                 <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
                     <% datas.tracks.data.forEach( x => {%>
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                        <div class="portfolio-wrap">
-                            <img src="<%= x.album.cover_big%>" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4><%= x.title_short%></h4>
-                                <p><%= x.artist.name%></p>
-                                <div class="portfolio-links">
-                                    <audio src="<%= x.preview%>" controls></audio>
-                                    <!-- <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a> -->
-                                    <a target="_blank" href="<%= x.link%>" title="Listen to full track"><i class="bx bx-link"></i></a>
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                            <div class="portfolio-wrap">
+                                <img src="<%= x.album.cover_big%>" class="img-fluid" alt="">
+                                <div class="portfolio-info">
+                                    <h4>
+                                        <%= x.title_short%>
+                                    </h4>
+                                    <p>
+                                        <%= x.artist.name%>
+                                    </p>
+                                    <div class="portfolio-links">
+                                        <audio src="<%= x.preview%>" controls></audio>
+                                        <!-- <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a> -->
+                                        <a target="_blank" href="<%= x.link%>" title="Listen to full track"><i class="bx bx-link"></i></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <% })%>
+                        <% })%>
 
                 </div>
 
             </div>
         </section>
         <!-- End T10 tracks Section -->
-        
 
-       
+
+
 
 
 
@@ -298,8 +314,12 @@
                             <div class="portfolio-wrap">
                                 <img src="<%= x.cover_big%>" class="img-fluid" alt="">
                                 <div class="portfolio-info">
-                                    <h4><%= x.title%></h4>
-                                    <p><%= x.artist.name%></p>
+                                    <h4>
+                                        <%= x.title%>
+                                    </h4>
+                                    <p>
+                                        <%= x.artist.name%>
+                                    </p>
                                     <div class="portfolio-links">
                                         <a target="_blank" href="<%= x.link%>" title="All Album's tracks"><i class="bx bx-link"></i></a>
                                     </div>
@@ -307,16 +327,16 @@
                             </div>
                         </div>
                         <% })%>
-                    </div>
-
                 </div>
+
+            </div>
         </section>
         <!-- End T10 Albums Section -->
 
-        
+
 
         <!-- ======= T10 playlist Section ======= -->
-        
+
         <section id="playlists" class="portfolio">
             <div class="container" data-aos="fade-up">
 
@@ -333,9 +353,15 @@
                             <div class="portfolio-wrap">
                                 <img src="<%= x.picture_big%>" class="img-fluid" alt="">
                                 <div class="portfolio-info">
-                                    <h4><%= x.title%></h4>
-                                    <p>Made By: <%= x.user.name%></p>
-                                    <p><%= x.creation_date%></p>
+                                    <h4>
+                                        <%= x.title%>
+                                    </h4>
+                                    <p>Made By:
+                                        <%= x.user.name%>
+                                    </p>
+                                    <p>
+                                        <%= x.creation_date%>
+                                    </p>
                                     <div class="portfolio-links">
                                         <a target="_blank" href="<%= x.link%>" title="All playlist's tracks"><i class="bx bx-link"></i></a>
                                     </div>
@@ -343,9 +369,9 @@
                             </div>
                         </div>
                         <% })%>
-                    </div>
-
                 </div>
+
+            </div>
         </section>
 
         <!-- End T10 playlist Section -->
@@ -384,7 +410,7 @@
                                 <div class="social">
                                     <a href="https://github.com/judyal-taweel
                                     " target="_blank"><i class="bi bi-github"></i></a>
-                                    <a href="https://www.facebook.com/mohmmad.nada" target="_blank"><i class="bi bi-facebook"></i></a>
+                                    <a href="" target="_blank"><i class="bi bi-facebook"></i></a>
                                     <a href="https://www.linkedin.com/in/judy-bataineh-9a832a1b7/" target="_blank"><i class="bi bi-linkedin"></i></a>
                                 </div>
                             </div>
@@ -397,9 +423,9 @@
                     <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
                         <div class="member" data-aos="fade-up" data-aos-delay="200">
                             <div class="member-img">
-                                <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
+                                <img src="./images/haneen.jpg" class="img-fluid" alt="">
                                 <div class="social">
-                                    <a href="" target="_blank"><i class="bi bi-twitter"></i></a>
+                                    <a href="https://github.com/haneenzyad98" target="_blank"><i class="bi bi-twitter"></i></a>
                                     <a href="" target="_blank"><i class="bi bi-facebook"></i></a>
                                     <a href="" target="_blank"><i class="bi bi-linkedin"></i></a>
                                 </div>
@@ -414,9 +440,9 @@
                     <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
                         <div class="member" data-aos="fade-up" data-aos-delay="300">
                             <div class="member-img">
-                                <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
+                                <img src="./images/ishaq.jpg" class="img-fluid" alt="">
                                 <div class="social">
-                                    <a href="" target="_blank"><i class="bi bi-github"></i></a>
+                                    <a href="https://github.com/super-penguin-301" target="_blank"><i class="bi bi-github"></i></a>
                                     <a href="" target="_blank"><i class="bi bi-facebook"></i></a>
                                     <a href="" target="_blank"><i class="bi bi-linkedin"></i></a>
                                 </div>
@@ -432,9 +458,9 @@
                     <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
                         <div class="member" data-aos="fade-up" data-aos-delay="400">
                             <div class="member-img">
-                                <img src="assets/img/team/team-4.png" class="img-fluid" alt="">
+                                <img src="./images/musab.png" class="img-fluid" alt="">
                                 <div class="social">
-                                    <a href="" target="_blank"><i class="bi bi-github"></i></a>
+                                    <a href="https://github.com/Musab-Al-omari" target="_blank"><i class="bi bi-github"></i></a>
                                     <a href="" target="_blank"><i class="bi bi-facebook"></i></a>
                                     <a href="" target="_blank"><i class="bi bi-linkedin"></i></a>
                                 </div>
@@ -563,11 +589,18 @@
                     <div class="col-lg-3 col-md-6 footer-links">
                         <h4>Our Features</h4>
                         <ul>
+                            <li><i class="bx bx-chevron-right"></i> free Download </li>
+                            <li><i class="bx bx-chevron-right"></i> High Quality Music</li>
+                            <!-- <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li> -->
+                            <li><i class="bx bx-chevron-right"></i> No ad interruptions</li>
+                            <li><i class="bx bx-chevron-right"></i> Play any song</li>
+
                             <li><i class="bx bx-chevron-right"></i> Free Download </li>
                             <li><i class="bx bx-chevron-right"></i> High Quality Music</li>
                             <!-- <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li> -->
                             <li><i class="bx bx-chevron-right"></i> No Ads Interruptions</li>
                             <li><i class="bx bx-chevron-right"></i> Play Any Song</li>
+                            >>>>>>> 41fcc7f786f39928418dd1176e5926e2870b8672
                         </ul>
                     </div>
 

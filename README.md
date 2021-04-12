@@ -1,6 +1,13 @@
 # music
 this repo for 301-project 
 
+# our team
+1. Ishaq Alathamneh  
+2. Haneen Zyad
+3. Mohmmad Nada
+4. Judy Al-taweel
+5. Musab-Al-omari
+
 # User stories
 1. As a user, I want to see the most popular songs so that make sure to include top ten songs.
 1. As a user I want to see your website's features so Include them in your main page.
