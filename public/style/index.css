@@ -151,7 +151,7 @@ h6 {
 #header {
     transition: all 0.5s;
     z-index: 997;
-    padding: 15px 0;
+    padding: 10px 0;
 }
 
 #header.header-scrolled,
@@ -473,10 +473,11 @@ h6 {
 
 #hero .container {
     position: relative;
-    padding-top: 65px;
-    padding-bottom: 50px;
+    padding-top: 40px;
+    padding-bottom: 20px;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.452);
+    margin-top: 20px;
 }
 
 #hero h1 {
@@ -1645,4 +1646,10 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+#artists {
+    background-color: #eee;
+}
+#albums {
+    background-color: #eee;
 }
