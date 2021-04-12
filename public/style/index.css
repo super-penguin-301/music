@@ -17,7 +17,9 @@ body {
     font-family: "Open Sans", sans-serif;
     color: #444444;
 }
-
+audio {
+    background-color: transparent;
+}
 a {
     color: #ffc451;
     text-decoration: none;
@@ -471,8 +473,10 @@ h6 {
 
 #hero .container {
     position: relative;
-    padding-top: 74px;
+    padding-top: 65px;
+    padding-bottom: 50px;
     text-align: center;
+    background-color: rgba(0, 0, 0, 0.452);
 }
 
 #hero h1 {
@@ -535,13 +539,13 @@ h6 {
         background-attachment: fixed;
     }
     #hero:before {
-        background-image: url("../images/austin-neill-hgO1wFPXl3I-unsplash.jpg");
+        background-image: url("../images/austin-neill-hgO1wFPXl3I-unsplash.jpg"), linear-gradient(to right,rgba(31, 31, 31, 0.61),rgba(0, 0, 0, 0.541));
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
     }
     #hero::after {
-        background-image: url("../images/austin-neill-hgO1wFPXl3I-unsplash.jpg");
+        background-image: url("../images/austin-neill-hgO1wFPXl3I-unsplash.jpg"), linear-gradient(to right,rgba(31, 31, 31, 0.61),rgba(0, 0, 0, 0.541));
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -1636,4 +1640,9 @@ section {
     text-align: center;
     font-size: 13px;
     color: #fff;
+}
+.portfolio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
