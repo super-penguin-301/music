@@ -555,7 +555,7 @@ h6 {
         font-size: 20px;
         line-height: 24px;
     }
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
 }
 
 
@@ -1093,7 +1093,7 @@ section {
 
 .testimonials {
     padding: 80px 0;
-    background: url("../img/testimonials-bg.jpg") no-repeat;
+    background: url("/assets/img/testimonials-bg.jpg") no-repeat;
     background-position: center center;
     background-size: cover;
     position: relative;
@@ -1647,7 +1647,7 @@ body {
     width: 100%;
     /* background: #fcf9fb; */
 }
-form{
+/* form{
     position: relative;
     top: 50%;
     left: 50%;
@@ -1690,9 +1690,9 @@ input{
     text-align: center;
     font-size: 1.2em;
     transition: all 1s;
-}
+} */
 
-form:hover{
+/* form:hover{
     width: 600px;
     cursor: pointer;
 }
@@ -1704,4 +1704,4 @@ form:hover input{
 form:hover .fa{
     background: black;
     color: white;
-}
+} */

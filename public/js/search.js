@@ -137,3 +137,29 @@ var snow = {
 	}
 
 };
+
+function btnOne(){
+	$('#one').click( function() {
+		$('#input').val($('#one').val());
+	})
+}
+function btnTwo(){
+	$('#two').click( function() {
+		$('#input').val($('#two').val());
+	})
+}
+function btnThree(){
+	$('#three').click( function() {
+		$('#input').val($('#three').val());
+	})
+}
+function btnFour(){
+	$('#four').click( function() {
+		$('#input').val($('#four').val());
+	})
+}
+function btnFive(){
+	$('#five').click( function() {
+		$('#input').val($('#five').val());
+	})
+}
