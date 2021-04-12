@@ -41,7 +41,7 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
             integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
         <form id="form" style="background-color:#fff;" action="/search" method="POST">
-            <input id="input" type="text" name="search" placeholder="search by song, artist and album.">
+            <input id="input" type="text" name="search" value="" placeholder="search by song, artist and album." required>
             <button id="buttons" type="submit" value="search" ><i class="fas fa-search"></i></button>
         </form>
 
@@ -55,51 +55,52 @@
               <div class="text-center">
                 <h3><i class="fas fa-music"></i> ...Listen and have fun</h3>
                 <p>Popular keyword.</p>
-                <a class="cta-btn" href="#">Call To Action</a>
-                <a class="cta-btn" href="#">Call To Action</a>
-                <a class="cta-btn" href="#">Call To Action</a>
-                <a class="cta-btn" href="#">Call To Action</a>
-                <a class="cta-btn" href="#">Call To Action</a>
+                <button class="cta-btn" onclick="btnOne()" id="one" value="<%= keyWords[0].word%>"><%= keyWords[0].word%></button>
+                <button class="cta-btn" onclick="btnTwo()" id="two" value="<%= keyWords[1].word%>"><%= keyWords[1].word%></button>
+                <button class="cta-btn" onclick="btnThree()" id="three" value="<%= keyWords[2].word%>"><%= keyWords[2].word%></button>
+                <button class="cta-btn" onclick="btnFour()" id="four" value="<%= keyWords[3].word%>"><%= keyWords[3].word%></button>
+                <button class="cta-btn" onclick="btnFive()" id="five" value="<%= keyWords[4].word%>"><%= keyWords[4].word%></button>
               </div>
         
             </div>
           </section>
 
 
-        <% if(ongs){ %>
-    
-                <section id="topten" class="portfolio">
-                    <div class="container" data-aos="fade-up">
-                        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
         
-                            <% mySongs.forEach(x=> { %>
-
-                                <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                                    <div class="portfolio-wrap">
-                                        <img src="<%= x.album.cover_big%>" class="img-fluid" alt="">
-                                        <div class="portfolio-info">
-                                            <h4>
-                                                <%= x.title_short%>
-                                            </h4>
-                                            <p>
-                                                <%= x.artist.name%>
-                                            </p>
-                                            <div class="portfolio-links">
-                                                <audio src="<%= x.preview%>" controls></audio>
-                                                <!-- <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a> -->
-                                                <a target="_blank" href="<%= x.link%>" title="Listen to full track"><i class="bx bx-link"></i></a>
-                                            </div>
+    
+          <% if(ongs){ %>
+    
+            <section id="topten" class="portfolio">
+                <div class="container" data-aos="fade-up">
+                    <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+    
+                        <% mySongs.forEach(x=> { %>
+                            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                                <div class="portfolio-wrap">
+                                    <img src="<%= x.album.cover_big%>" class="img-fluid" alt="">
+                                    <div class="portfolio-info">
+                                        <h4>
+                                            <%= x.title_short%>
+                                        </h4>
+                                        <p>
+                                            <%= x.artist.name%>
+                                        </p>
+                                        <div class="portfolio-links">
+                                            <audio src="<%= x.preview%>" controls></audio>
+                                            <!-- <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a> -->
+                                            <a target="_blank" href="<%= x.link%>" title="Listen to full track"><i class="bx bx-link"></i></a>
                                         </div>
                                     </div>
                                 </div>
-                                <% })%>
-        
-                        </div>
-        
+                            </div>
+                            <% })%>
+    
                     </div>
-                </section>
-             
-                <% } %>
+    
+                </div>
+            </section>
+         
+            <% } %>
 
 
 
@@ -133,6 +134,8 @@
     <!-- Template Main JS File -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="js/search.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="assets/js/main.js"></script>

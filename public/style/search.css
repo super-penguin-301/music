@@ -1721,3 +1721,9 @@ body {
     width: 100%;
     text-align: center;
 }
+#cta button {
+    background: transparent;
+}
+#cta button:hover {
+    color: #ffcd6b;
+}
