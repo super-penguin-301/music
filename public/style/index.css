@@ -225,6 +225,9 @@ h6 {
 
 .navbar {
     padding: 0;
+    /* margin: 0 auto; */
+    justify-self:center;
+
 }
 
 .navbar ul {
@@ -1484,6 +1487,12 @@ section {
     .breadcrumbs ol li {
         display: inline-block;
     }
+    .navbar {
+        padding: 0;
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+    }
 }
 
 
@@ -1656,4 +1665,7 @@ section {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+#home:visited {
+    color:#ffc451;
 }

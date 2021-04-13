@@ -204,6 +204,12 @@ h6 {
     #hero::after {
         background-color: red;
     }
+    .navbar {
+        padding: 0;
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+    }
 }
 
 
@@ -1708,4 +1714,7 @@ form:hover .fa{
 .align-items-stretch {
     /* align-items: stretch!important; */
     margin-right: 40px;
+}
+#about:visited {
+    color:#ffc451;
 }
