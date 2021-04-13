@@ -17,9 +17,11 @@ body {
     font-family: "Open Sans", sans-serif;
     color: #444444;
 }
+
 audio {
     background-color: transparent;
 }
+
 a {
     color: #ffc451;
     text-decoration: none;
@@ -227,6 +229,8 @@ h6 {
 
 .navbar {
     padding: 0;
+    /* margin: 0 auto; */
+    justify-self: center;
 }
 
 .navbar ul {
@@ -540,13 +544,11 @@ h6 {
         background-attachment: fixed;
     }
     #hero:before {
-        background-image: url("../images/austin-neill-hgO1wFPXl3I-unsplash.jpg"), linear-gradient(to right,rgba(31, 31, 31, 0.61),rgba(0, 0, 0, 0.541));
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
     }
     #hero::after {
-        background-image: url("../images/austin-neill-hgO1wFPXl3I-unsplash.jpg"), linear-gradient(to right,rgba(31, 31, 31, 0.61),rgba(0, 0, 0, 0.541));
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -565,7 +567,7 @@ h6 {
         font-size: 20px;
         line-height: 24px;
     }
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
 }
 
 
@@ -1486,6 +1488,12 @@ section {
     .breadcrumbs ol li {
         display: inline-block;
     }
+    .navbar {
+        padding: 0;
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+    }
 }
 
 
@@ -1642,14 +1650,31 @@ section {
     font-size: 13px;
     color: #fff;
 }
+
 .portfolio {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 #artists {
     background-color: #eee;
 }
+
 #albums {
     background-color: #eee;
+}
+
+#hero:before {
+    background-image: url(../images/austin-neill-hgO1wFPXl3I-unsplash.jpg), linear-gradient(to right, rgba(31, 31, 31, 0.61), rgba(0, 0, 0, 0.541));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#home:visited {
+    color: #ffc451;
+}
+#mainLogo{
+    width: 150px;
 }
