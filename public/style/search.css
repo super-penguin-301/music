@@ -16,10 +16,19 @@
 body {
     font-family: "Open Sans", sans-serif;
     color: #444444;
+    background-color:#eee;
 }
-audio {
-    background-color: transparent;
-}
+
+/* audio::-webkit-media-controls-panel, video::-webkit-media-controls-panel {
+   
+  background-color: initial;
+} */
+
+
+
+
+
+
 a {
     color: #ffc451;
     text-decoration: none;
@@ -141,6 +150,34 @@ h6 {
     #hero::after {
         background-color: red;
     }
+    #form{
+        width: 100%;
+        height: 50px;
+        background: white;
+        box-sizing: border-box;
+        margin-top: 150px;
+        margin-bottom: 100px;
+    
+    }
+    
+    #input{
+       
+        width: 80%;
+        height: 50px;
+        border-radius: 2rem;
+        
+    }
+
+    #buttons{
+        background-color: transparent; 
+        border: none; 
+        position: relative; 
+        
+      
+    }
+
+
+
 }
 
 
@@ -214,6 +251,11 @@ h6 {
     #hero::after {
         background-color: red;
     }
+
+
+
+
+    
 }
 
 
@@ -335,6 +377,36 @@ h6 {
     #hero::after {
         background-color: red;
     }
+
+     #form{
+   
+    height: 50px;
+    background: white;
+    box-sizing: border-box;
+    /* border: 4px solid white; */
+    /* padding: 5px; */
+    margin-top: 150px;
+    margin-bottom: 100px;
+
+}
+
+#input{
+    width: 40%;
+    height: 50px;
+    /* align-items: center; */
+    /* position: relative; */
+    /* right:280px; */
+    border-radius: 2rem;
+    
+}
+
+
+#buttons{
+    background-color: transparent; 
+    border: none; 
+    position: relative; 
+   
+} 
 }
 
 
@@ -788,7 +860,7 @@ section {
 .cta {
     background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)), url("/images/download.jpeg") fixed center center;
     background-size: cover;
-    padding: 60px 0;
+    padding: 10%;
 }
 
 .cta h3 {
@@ -1487,6 +1559,12 @@ section {
     .breadcrumbs ol li {
         display: inline-block;
     }
+    .navbar {
+        padding: 0;
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+    }
 }
 
 
@@ -1658,64 +1736,17 @@ body {
     width: 100%;
     /* background: #fcf9fb; */
 }
-#form{
-    position: relative;
-    top: 70%;
-    left: 50%;
-    width: 50%;
-    height: 50px;
-    background: white;
-    box-sizing: border-box;
-    border: 4px solid white;
-    padding: 5px;
-    margin-top: 150px;
-    margin-bottom: 100px;
+ #form{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+   
 
 }
 
 #input{
-    width: 80%;
-    height: 50px;
-    align-items: center;
-    position: relative;
-    right:280px;
-    border-radius: 2rem;
+    margin-left: 30%;
     
-}
-
-.fa{
-    box-sizing: border-box;
-    padding: 10px;
-    width: 42.5px;
-    height: 42.5px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    border-radius: 50%;
-    color: #845460;
-    text-align: center;
-    font-size: 1.2em;
-    transition: all 1s;
-}
-
-/* #form:hover{
-    width: 600px;
-    cursor: pointer;
-}
-
-#form:hover #input{
-    display: block;
-}
-
-#form:hover .fa{
-    background: black;
-    color: white;
-} */
-#buttons{
-    background-color: transparent; 
-    border: none; 
-    position: relative; 
-    right: 320px;
 }
 #input::placeholder{
     width: 100%;
@@ -1726,4 +1757,18 @@ body {
 }
 #cta button:hover {
     color: #ffcd6b;
+}
+
+@media screen and (max-width: 768px){
+#input {
+width: 60%;
+margin-left: 20%;
+
+}}
+
+#buttons{
+    right: 35px;
+}
+#search:visited {
+    color:#ffc451;
 }
