@@ -12,6 +12,45 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+#form{
+   
+    height: 50px;
+    background: white;
+    box-sizing: border-box;
+    margin-top: 150px;
+    margin-bottom: 100px;
+
+}
+
+#input{
+    width: 40%;
+    height: 50px;
+ 
+    border-radius: 2rem;
+    
+}
+
+
+#buttons{
+    background-color: transparent; 
+    border: none; 
+    position: relative; 
+   
+} 
+/* #form{
+    margin-top: 300px;
+    margin-bottom: 100px;
+}
+
+#input{
+       
+    width: 80%;
+    height: 50px;
+    border-radius: 2rem;
+   
+    
+} */
+
 
 body {
     font-family: "Open Sans", sans-serif;
@@ -47,6 +86,8 @@ h5,
 h6 {
     font-family: "Raleway", sans-serif;
 }
+
+/* @media screen and (max-width: 768px) {} */
 
 
 /*--------------------------------------------------------------
@@ -436,6 +477,7 @@ h6 {
     #hero::after {
         background-color: red;
     }
+    
 }
 
 .navbar-mobile {
@@ -1772,3 +1814,12 @@ margin-left: 20%;
 #search:visited {
     color:#ffc451;
 }
+
+#buttons{
+    background-color: transparent; 
+    border: none; 
+    position: relative; 
+    
+  
+}
+
