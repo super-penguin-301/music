@@ -12,7 +12,7 @@ const app = express();
 const client = new pg.Client(process.env.DATABASE_URL);
 app.set('view engine', 'ejs');
 app.use(express.static('./public/'));
-app.use(express.urlencoded({extended : true}))
+app.use(express.urlencoded({ extended: true }))
 app.use(methodoverride('_method'));
 //---------------------------------------------------------
 
@@ -26,22 +26,22 @@ app.post('/search', searchPostHandler);
 //---------------------------------------------------------
 // error handler functions
 app.use('*', notFoundHandler); // 404 not found url
- 
+
 app.use(errorHandler);
 
 function notFoundHandler(request, response) {
-  response.status(404).sendFile('./error', {root : './'})
+    response.status(404).sendFile('./error', { root: './' })
 }
 
 function errorHandler(err, request, response, next) {
-  response.status(500).render('error');
+    response.status(500).render('error');
 }
 //---------------------------------------------------------
 
 // connect to DB & run the server
-client.connect().then(()=> {
+client.connect().then(() => {
 
-    app.listen(PORT, ()=> console.log(`I'm working at port ${PORT}`))
+    app.listen(PORT, () => console.log(`I'm working at port ${PORT}`))
 });
 //---------------------------------------------------------
 
@@ -50,15 +50,17 @@ let btata = false;
 // handler functions
 function indexHandler(req, res) {
     let URL = 'https://api.deezer.com/chart';
-    superagent.get(URL).then( result => {
+    superagent.get(URL).then(result => {
         let info = result.body;
 
-        res.render('index', { datas: info});
+        res.render('index', { datas: info });
     })
 }
+
 function searchHandler(req, res) {
     console.log(req.body);
     btata = false;
+
     let SQL = `select  * from keywords  order by count desc limit 5;`;
     client.query(SQL).then( words => {
         console.log(words.rows);
@@ -66,15 +68,19 @@ function searchHandler(req, res) {
         res.render('search', {ongs:btata, keyWords:  words.rows});
     })
 }
+
 function favoriteHandler(req, res) {
     res.render('favorite');
 }
+
 function detailsHandler(req, res) {
     res.render('details');
 }
+
 function aboutHandler(req, res) {
     res.render('about');
 }
+
 function searchPostHandler(req, res) {
     let info = req.body.search;
     console.log(info);
@@ -92,6 +98,7 @@ function searchPostHandler(req, res) {
         }
     })
     let URL = `https://api.deezer.com/search?q=${info}&limit=10`;
+
     
     superagent.get(encodeURI(URL)).then( songs => {
         let SQL = `select  * from keywords  order by count desc limit 5;`;
