@@ -204,6 +204,12 @@ h6 {
     #hero::after {
         background-color: red;
     }
+    .navbar {
+        padding: 0;
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+    }
 }
 
 
@@ -1705,3 +1711,6 @@ form:hover .fa{
     background: black;
     color: white;
 } */
+#about:visited {
+    color:#ffc451;
+}

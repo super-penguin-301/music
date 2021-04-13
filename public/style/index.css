@@ -227,6 +227,9 @@ h6 {
 
 .navbar {
     padding: 0;
+    /* margin: 0 auto; */
+    justify-self:center;
+
 }
 
 .navbar ul {
@@ -1486,6 +1489,12 @@ section {
     .breadcrumbs ol li {
         display: inline-block;
     }
+    .navbar {
+        padding: 0;
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+    }
 }
 
 
@@ -1652,4 +1661,8 @@ section {
 }
 #albums {
     background-color: #eee;
+}
+
+#home:visited {
+    color:#ffc451;
 }
