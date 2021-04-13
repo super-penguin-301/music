@@ -17,9 +17,7 @@ body {
     font-family: "Open Sans", sans-serif;
     color: #444444;
 }
-audio {
-    background-color: transparent;
-}
+
 a {
     color: #ffc451;
     text-decoration: none;
@@ -565,7 +563,7 @@ h6 {
         font-size: 20px;
         line-height: 24px;
     }
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
 }
 
 
@@ -1652,4 +1650,10 @@ section {
 }
 #albums {
     background-color: #eee;
+}
+#hero:before {
+    background-image: url(../images/austin-neill-hgO1wFPXl3I-unsplash.jpg), linear-gradient(to right,rgba(31, 31, 31, 0.61),rgba(0, 0, 0, 0.541));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }

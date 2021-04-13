@@ -1705,3 +1705,7 @@ form:hover .fa{
     background: black;
     color: white;
 } */
+.align-items-stretch {
+    /* align-items: stretch!important; */
+    margin-right: 40px;
+}

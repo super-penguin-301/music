@@ -73,9 +73,6 @@
       behavior: 'smooth'
     })
   }
-<<<<<<< HEAD
-}
-=======
 
   /**
    * Toggle .header-scrolled class to #header when page is scrolled
@@ -288,4 +285,3 @@
   });
 
 })()
->>>>>>> 0dc3f963ba0204a3085e91535e224662d865be7a
