@@ -17,7 +17,7 @@
     height: 50px;
     background: white;
     box-sizing: border-box;
-    margin-top: 150px;
+    margin-top: 10px;
     margin-bottom: 100px;
 
 }
@@ -426,7 +426,7 @@ h6 {
     box-sizing: border-box;
     /* border: 4px solid white; */
     /* padding: 5px; */
-    margin-top: 150px;
+    /* margin-top: 150px; */
     margin-bottom: 100px;
 
 }
@@ -1781,13 +1781,13 @@ body {
  #form{
     width: 100%;
     display: flex;
-    justify-content: start;
+    justify-content: center;
    
 
 }
 
 #input{
-    margin-left: 30%;
+    margin-left: 5px;
     
 }
 #input::placeholder{
@@ -1822,4 +1822,13 @@ margin-left: 20%;
     
   
 }
-
+#mainLogo{
+    width: 150px;
+}
+#secLogo {
+    width: 150px;
+    position: relative;
+    left: 50%;
+    margin-left: -75px;
+    margin-top: 150px;    
+}

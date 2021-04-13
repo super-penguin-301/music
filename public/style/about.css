@@ -1114,6 +1114,7 @@ section {
     background-position: center center;
     background-size: cover;
     position: relative;
+    margin-top: 111px;
 }
 
 .testimonials::before {
@@ -1735,4 +1736,7 @@ form:hover .fa{
 
 #about:visited {
     color: #ffc451;
+}
+#mainLogo{
+    width: 150px;
 }
